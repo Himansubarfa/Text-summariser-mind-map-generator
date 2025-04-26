@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMapper - Content to Mind Maps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Authentication Container -->
+    <div class="auth-container" id="auth-container">
+        <div class="auth-card">
+            <div class="auth-switch">
+                <button id="login-switch" class="active">Login</button>
+                <button id="signup-switch">Sign Up</button>
+            </div>
+            
+            <div class="auth-form" id="login-form">
+                <h2>Welcome Back!</h2>
+                <div class="input-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password">
+                </div>
+                <button class="auth-btn" id="login-btn">Login</button>
+            </div>
+            
+            <div class="auth-form" id="signup-form" style="display: none;">
+                <h2>Create an Account</h2>
+                <div class="input-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Enter your full name">
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a password">
+                </div>
+                <button class="auth-btn" id="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Application -->
+    <div class="app-container" id="app-container">
+        <div class="app-overlay">
+            <header>
+                <div class="logo">MindMapper</div>
+                <div class="user-info">
+                    <span class="user-name" id="user-name">User Name</span>
+                    <button class="logout-btn" id="logout-btn">Logout</button>
+                </div>
+            </header>
+            
+            <main>
+                <section class="tool-section">
+                    <h2>Content Summarization</h2>
+                    <input type="text" class="topic-input" id="topic-input" placeholder="Enter main topic name (e.g., 'Climate Change', 'Machine Learning')">
+                    <textarea class="content-input" id="content-input" placeholder="Paste or type your content here..."></textarea>
+                    <button class="btn-primary" id="summarize-btn">Summarize Content</button>
+                    
+                    <div class="summary-box" id="summary-box" style="display: none;">
+                        <h3>Summary</h3>
+                        <p id="summary-text"></p>
+                        <button class="btn-primary" id="generate-mindmap-btn" style="margin-top: 15px;">Generate Mind Map</button>
+                    </div>
+                </section>
+                
+                <section class="tool-section" id="mindmap-section" style="display: none;">
+                    <h2>Your Mind Map</h2>
+                    <div id="mindmap-container">
+                        <canvas id="mindmap-canvas"></canvas>
+                    </div>
+                </section>
+                
+                <section class="about-section">
+                    <h2>About MindMapper</h2>
+                    <p>MindMapper is a powerful tool designed to help you organize and visualize your thoughts. Simply input any text content, and our advanced algorithms will generate a concise summary and an interactive mind map to help you understand the key concepts and their relationships.</p>
+                    <p>Whether you're a student, professional, or just someone who loves to organize thoughts, MindMapper can help you transform complex information into clear, visual structures.</p>
+                </section>
+            </main>
+            
+            <footer>
+                <p>&copy; 2025 MindMapper. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
